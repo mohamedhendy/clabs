@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/progress.css">
+  <link rel="stylesheet" href="./css/progress-light.css">
+  <link rel="stylesheet" href="./css/progress-white.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Clabs</title>
+</head>
+<!-- Home Page  -->
+
+<body>
+  <header class="container-fluid na-nv sticky-top">
+    <div class="row w-100 p-0 m-0">
+      <!-- navbar  -->
+      <div class="col-1 p-0 weird-btn">
+        <span class="text-center ">
+          <button class="state" id="exit" data-toggle="tooltip" data-placement="bottom" title="Exit"></button>
+          <button class="state" id="resize" data-toggle="tooltip" data-placement="bottom" title="Resize"></button>
+          <button class="state" id="minimize" data-toggle="tooltip" data-placement="bottom" title="Minimize"></button>
+        </span>
+      </div>
+      <div class="navbar-menu col-11 p-0 m-0">
+        <div class="container-fluid men">
+          <div class="nav-menu">
+            <div class="navigation-btn">
+              <ul class="list-unstyled">
+                <li class="d-inline-block home-page active"><a data-toggle="tooltip" data-placement="bottom"
+                    title="Home" href="./home.html"></a></li>
+                <li class="d-inline-block captcha-page"><a data-toggle="tooltip" data-placement="bottom" title="Captcha"
+                    href="./captcha.html"></a></li>
+                <li class="d-inline-block spoofer-page"><a data-toggle="tooltip" data-placement="bottom" title="Splash"
+                    href="./spoofer.html"></a>
+                </li>
+                <li class="d-inline-block account-page"><a data-toggle="tooltip" data-placement="bottom" title="Account"
+                    href="./account.html"></a>
+                </li>
+                <li class="d-inline-block proxy-page"><a data-toggle="tooltip" data-placement="bottom" title="Proxy"
+                    href="./proxy.html"></a></li>
+              </ul>
+            </div>
+            <div class="account-info">
+              <ul class="list-unstyled">
+                <li class="d-inline-block mr-2 ">
+                  <div><span class="notification"></span></div>
+                </li>
+                <li class="d-inline-block">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle text-left" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="d-inline-block "><img src="./images/home-page/user.png" alt=""></span>
+                      <span class="user-info d-inline-block">
+                        <span class="user-title class d-block">
+                          Expired date
+                        </span>
+                        <span class="user-date class d-block">
+                          April 12, 2020
+                        </span>
+                      </span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item refresh" href="#"><span><img
+                            src="./images/captcha-page/refresh-button.png" alt=""></span>renew</a>
+                      <a class="dropdown-item block" href="#"><span><img src="./images/captcha-page/block.png"
+                            alt=""></span>Deactivate</a>
+                      <a class="dropdown-item logout-l" href="#"><span><img src="./images/captcha-page/logout.png"
+                            alt=""></span>Logout</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="home-section-content">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-lg-5 main-ava ">
+          <!-- user information  -->
+          <div class="account  wow fadeInLeft">
+            <div class="account-avatar">
+              <img src="./images/home-page/avatar.png" alt="" srcset="">
+            </div>
+            <div class="welcome">
+              <span class="wel-title">Welcome abroad,</span>
+              <span class="wel-date">March 20,2020</span>
+            </div>
+          </div>
+          <h3 class="text-white kevin  wow fadeInLeft">Kevin Trover</h3>
+          <p class="track track-org  wow fadeInLeft">“Track your work and stay organized”</p>
+
+          <!-- license renew form  -->
+          <div class="row org-item  wow fadeInUp">
+            <div class="col-md-7 form-renew">
+              <div class="lic">
+                <span class="plan">Plan</span>
+                <h3 class="renew text-white py-2">Renewal</h3>
+                <div class="welcome license">
+                  <span class="account-title text-white">April 12, 2020</span>
+                  <span class="account-date">19 days left</span>
+                </div>
+                <div class="text-right">
+                  <button class="Renew-btn">Renew</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 second-track">
+              <div class="lic">
+                <span class="plan">Clan Running Time </span>
+                <h3 class="mt-2">1542</h3>
+              </div>
+              <div class="lic">
+                <span class="plan">Actions Done</span>
+                <h3 class="mt-2">1542</h3>
+              </div>
+            </div>
+          </div>
+          <div class="news lic">
+            <span class="plan d-block mb-3">Change log</span>
+            <div class="news-content">
+              <p>v1.3 (Mar 18) Update Cool UI and more features</p>
+              <p>v1.1.4 (Feb 22) Secure payments with KnoX </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 bars  wow fadeInRight">
+          <div class="row">
+            <!-- index of percentage  -->
+            <div class="col-md-4">
+              <div class="main-circle">
+                <div class="h-circle-btn">
+                  <ul class="list-unstyled">
+                    <li class="d-inline-block"><button>T</button></li>
+                    <li class="d-inline-block"><button>W</button></li>
+                    <li class="d-inline-block active "><button>M</button></li>
+                    <li class="d-inline-block"><button>Y</button></li>
+                  </ul>
+                </div>
+                <div class="first-circle">
+                  <div class="progress-radial progress-20"><b></b></div>
+                </div>
+                <div class="circle-content second-track ">
+                  <span class="plan">Account Generated</span>
+                  <h3 class="mt-2">146</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="main-circle">
+                <div class="h-circle-btn">
+                  <ul class="list-unstyled">
+                    <li class="d-inline-block active"><button>T</button></li>
+                    <li class="d-inline-block"><button>W</button></li>
+                    <li class="d-inline-block "><button>M</button></li>
+                    <li class="d-inline-block"><button>Y</button></li>
+                  </ul>
+                </div>
+                <div class="second-circle">
+                  <div class="progress-light-radial progress-light-80 "><b></b></div>
+                </div>
+                <div class="circle-content second-track ">
+                  <span class="plan">Acc. Loaded in Captcha</span>
+                  <h3 class="mt-2">421</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="main-circle">
+                <div class="h-circle-btn">
+                  <ul class="list-unstyled">
+                    <li class="d-inline-block active"><button>T</button></li>
+                    <li class="d-inline-block"><button>W</button></li>
+                    <li class="d-inline-block "><button>M</button></li>
+                    <li class="d-inline-block"><button>Y</button></li>
+                  </ul>
+                </div>
+                <div class="third-circle">
+                  <div class="progress-white-radial progress-white-70 "><b></b></div>
+                </div>
+                <div class="circle-content second-track ">
+                  <span class="plan">Proxies in Proxy Tester</span>
+                  <h3 class="mt-2">404</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row index second-track">
+
+            <!-- account index percentage  -->
+            <div class="col-md-8">
+              <span class="plan">Account used in Captcha Tools (One clicks)</span>
+            </div>
+            <div class="col-md-4 ">
+              <div class="h-circle-btn">
+                <ul class="list-unstyled text-right">
+                  <li class="d-inline-block"><button>T</button></li>
+                  <li class="d-inline-block"><button>W</button></li>
+                  <li class="d-inline-block active"><button>M</button></li>
+                  <li class="d-inline-block"><button>Y</button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 second-track">
+              <h4>146</h4>
+            </div>
+            <div class="container index-values">
+              <div class="row">
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="90%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 19</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="75%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 20</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="40%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 21</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="70%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 22</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="40%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 23</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="80%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 24</small></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col ">
+                  <div class="d-flex justify-content-end flex-column">
+                    <div class="method">
+                      <div class="fill-item" percent-value="95%">
+                      </div>
+                    </div>
+                    <div class="index-date">
+                      <span class="plan"><small>Mar 25</small></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="home-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col pr-0 home-copy">Copyrights @clabs 2020</div>
+          <div class="col pl-0 footer-links">
+            <span class="mr-2"><a class="twitter" href=""></a></span>
+            <span class="mr-2"><a class="help" href=""></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script> new WOW().init(); </script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

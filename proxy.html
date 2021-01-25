@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/progress.css">
+  <link rel="stylesheet" href="./css/progress-light.css">
+  <link rel="stylesheet" href="./css/progress-white.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Clabs</title>
+</head>
+<!-- Home Page  -->
+
+<body>
+  <header class="container-fluid na-nv sticky-top">
+    <div class="row w-100 p-0 m-0">
+      <!-- navbar  -->
+      <div class="col-1 p-0 weird-btn">
+        <span class="text-center ">
+          <button class="state" id="exit" data-toggle="tooltip" data-placement="bottom" title="Exit"></button>
+          <button class="state" id="resize" data-toggle="tooltip" data-placement="bottom" title="Resize"></button>
+          <button class="state" id="minimize" data-toggle="tooltip" data-placement="bottom" title="Minimize"></button>
+        </span>
+      </div>
+      <div class="navbar-menu col-11 p-0 m-0">
+        <div class="container-fluid men">
+          <div class="nav-menu">
+            <div class="navigation-btn">
+              <ul class="list-unstyled">
+                <li class="d-inline-block home-page active"><a data-toggle="tooltip" data-placement="bottom"
+                    title="Home" href="./home.html"></a></li>
+                <li class="d-inline-block captcha-page"><a data-toggle="tooltip" data-placement="bottom" title="Captcha"
+                    href="./captcha.html"></a></li>
+                <li class="d-inline-block spoofer-page"><a data-toggle="tooltip" data-placement="bottom" title="Splash"
+                    href="./spoofer.html"></a>
+                </li>
+                <li class="d-inline-block account-page"><a data-toggle="tooltip" data-placement="bottom" title="Account"
+                    href="./account.html"></a>
+                </li>
+                <li class="d-inline-block proxy-page"><a data-toggle="tooltip" data-placement="bottom" title="Proxy"
+                    href="./proxy.html"></a></li>
+              </ul>
+            </div>
+            <div class="account-info">
+              <ul class="list-unstyled">
+                <li class="d-inline-block mr-2 ">
+                  <div><span class="notification"></span></div>
+                </li>
+                <li class="d-inline-block">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle text-left" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="d-inline-block "><img src="./images/home-page/user.png" alt=""></span>
+                      <span class="user-info d-inline-block">
+                        <span class="user-title class d-block">
+                          Expired date
+                        </span>
+                        <span class="user-date class d-block">
+                          April 12, 2020
+                        </span>
+                      </span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item refresh" href="#"><span><img
+                            src="./images/captcha-page/refresh-button.png" alt=""></span>renew</a>
+                      <a class="dropdown-item block" href="#"><span><img src="./images/captcha-page/block.png"
+                            alt=""></span>Deactivate</a>
+                      <a class="dropdown-item logout-l" href="#"><span><img src="./images/captcha-page/logout.png"
+                            alt=""></span>Logout</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="captcha-section-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 core-ca core-account">
+          <div class="container">
+            <div class="form-captcha  wow slideInLeft">
+              <!-- form register  -->
+              <form action="">
+                <div class="d-flex prx-lic   flex-colum justify-content-between">
+                  <div class="license d-inline-block create">
+                    <span class="point"></span><span>Proxy Tester</span>
+                  </div>
+                  <div class="prx-page">
+                    <button class="export-cap proxy-import d-flex justify-content-between">Import proxy <img
+                        src="./images/captcha-page/ic_download.png" alt=""></button>
+                  </div>
+                </div>
+                <div class="manually">
+                  <div class="form-group">
+                    <label for="email" class="text-white">Site</label>
+                    <input type="text" id="email" class="form-control" placeholder="http://siteurl.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="proxy" class="text-white">Proxy</label>
+                    <input type="text" id="proxy" class="form-control" placeholder="Input proxy here">
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button class="Renew-btn" type="submit">Create Task</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-8 big  wow slideInUp">
+          <!-- table of users accounts  -->
+          <div class="main-control-table">
+            <div class="row">
+              <div class="col-md-5 ">
+                <div class="license create tasks w-100">
+                  <div><span class="point"></span><span>Tasks</span></div>
+                  <ul class="list-unstyled p-0 m-0 move-btn">
+                    <li class="d-inline-block"></li>
+                    <!-- global buttons control 
+                     -->
+                    <!-- run btn  -->
+                    <li class="d-inline-block"><button class="run run-all" data-toggle="tooltip" data-placement="top"
+                        title="run all"></button></li>
+                    <!-- push btn  -->
+                    <li class="d-inline-block"><button class="push push-all" data-toggle="tooltip" data-placement="top"
+                        title="stop all"></button></li>
+                    <!-- delete btn  -->
+                    <li class="d-inline-block"><button class="delete" data-toggle="tooltip" data-placement="top"
+                        title="delete all"></button></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-7   text-right">
+                <button class="export-cap px-cap">Export Working Proxy <img src="./images/captcha-page/ic_download.png"
+                    alt=""></button>
+              </div>
+            </div>
+            <div class="table-values table-values-cap table-proxy">
+              <!-- main table indicate local user information and control btns  -->
+              <table class="table table-p table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th scope="col">IP</th>
+                    <th scope="col">Port</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Speed</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="verify"><img src="./images/captcha-page/right.png" class="w-100"
+                          alt=""></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class=" icons-active">
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="verify"></span><input type="text" value="255.255.255.0" disabled="disabled"></td>
+                    <td><input type="text" value="4040" disabled="disabled"></td>
+                    <td><input type="text" value="BIDAHDIFQF" disabled="disabled"></td>
+                    <td><input type="text" value="wbeff2hr2urh2" disabled="disabled"></td>
+                    <td><input type="text" value="120ms" disabled="disabled"></td>
+                    <td>
+                      <ul class="list-unstyled p-0 m-0 move-btn">
+                        <li class="d-inline-block"></li>
+                        <li class="d-inline-block"><button class="run" data-toggle="tooltip-m" data-placement="top"
+                            title="run"></button></li>
+                        <li class="d-inline-block"><button class="push" data-toggle="tooltip-m" data-placement="top"
+                            title="stop"></button></li>
+                        <li class="d-inline-block"><button class="edit" data-toggle="tooltip-m" data-placement="top"
+                            title="edit"></button></li>
+                        <li class="d-inline-block"><button class="delete" data-toggle="tooltip-m" data-placement="top"
+                            title="delete"></button></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="home-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col pr-0">Copyrights @clabs 2020</div>
+          <div class="col pl-0 footer-links">
+            <span class="mr-2"><a class="twitter" href=""></a></span>
+            <span class="mr-2"><a class="help" href=""></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script> new WOW().init(); </script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
